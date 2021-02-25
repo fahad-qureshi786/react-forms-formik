@@ -12,6 +12,7 @@ const PhoneInput = ({ name, label, ...props }) => {
         {(props) => (
           <Form.Control
             {...props}
+            {...field}
             type="tel"
             className={touched && error && "is-invalid"}
           />

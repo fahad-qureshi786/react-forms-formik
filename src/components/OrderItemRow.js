@@ -17,10 +17,10 @@ const OrderItemRow = ({ item, i }) => {
     <tr className="align-middle">
       <td>{item.name}</td>
       <td style={{ maxWidth: "60px" }}>
-        <Form.Control {...qty} onKeyUp={updateAmount} />
+        <Form.Control type="number" {...qty} onKeyUp={updateAmount} />
       </td>
       <td style={{ maxWidth: "70px" }}>
-        <Form.Control {...rate} onKeyUp={updateAmount} />
+        <Form.Control type="number" {...rate} onKeyUp={updateAmount} />
       </td>
       <td>
         <CurrencyFormat value={amount} displayType="text" prefix="Rs. " />

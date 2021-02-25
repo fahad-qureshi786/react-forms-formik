@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap-v5";
-import { Field, Form, Formik } from "formik";
+import { Field, Form, Formik, useFormikContext } from "formik";
 import * as Yup from "yup";
 import moment from "moment-timezone";
 
@@ -33,10 +33,10 @@ const initialValues = {
 
 export const OrderForm = () => {
   return (
-    <div className="shadow shadow-md rounded p-3">
+    <div className="shadow shadow-md rounded p-4">
       <Formik initialValues={initialValues} validationSchema={validationSchema}>
         <Form>
-          <h3 className="text-center">New Order</h3>
+          <h3 className="text-center display-4">New Order</h3>
           <Row className="my-3 g-2">
             <Col>
               <Field
